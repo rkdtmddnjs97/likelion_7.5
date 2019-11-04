@@ -1,0 +1,11 @@
+<h1>Make your Blog!</h1>
+
+{% for blog in blogs.all %}
+    <div class= "container">
+        <a href ="{% url 'detail' blog.id%}"><h2>{{blog.title}}</h2></a>
+       <p>{{blog.date}}</p>
+       <p>{{blog.summary}}</p>
+
+    </div>
+
+{% endfor %}
