@@ -1,5 +1,9 @@
+{% extends 'base.html'%}
+
+{% block content %}
 <h1>Make your Blog!</h1>
 
+<a href="{% url 'new' %}">글 작성하기</a>
 {% for blog in blogs.all %}
     <div class= "container">
         <a href ="{% url 'detail' blog.id%}"><h2>{{blog.title}}</h2></a>
@@ -9,3 +13,5 @@
     </div>
 
 {% endfor %}
+
+{%endblock%}
